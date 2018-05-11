@@ -14,6 +14,8 @@ class App extends PureComponent {
     super()
     this.state = {
       progress: 0,
+      word: randomWord(),
+      guesses: []
     }
   }
 
@@ -21,6 +23,8 @@ class App extends PureComponent {
     const {
       progress,
     } = this.state
+
+    console.log(this.state)
 
     return (
       <div>
