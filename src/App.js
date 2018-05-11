@@ -19,12 +19,13 @@ class App extends PureComponent {
     }
   }
 
+
   render() {
     const {
       progress,
+      word,
+      guesses
     } = this.state
-
-    console.log(this.state)
 
     return (
       <div>
@@ -36,9 +37,21 @@ class App extends PureComponent {
         <button onClick={() => this.setState({ progress: progress + 1 })}>
           Hang The Man !
         </button>
+
+        {'abcdefghijklmnopqrstuvwxyz-'.split('').map(this.renderInputButton)}
       </div>
     )
+
   }
+
+  renderInputButton(letter) {
+    return(
+    <button onClick={() => console.log(letter)}>
+    {letter}
+    </button>
+    )
+  }
+
 }
 
 export default App;
