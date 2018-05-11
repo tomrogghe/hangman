@@ -9,6 +9,8 @@ const guesses = ['a', 'e', 'i', 'o', 'u', 't', 'n']
 console.log(word, guesses, renderWord(word, guesses), done(word, guesses))
 */
 
+
+
 class App extends PureComponent {
   constructor() {
     super()
@@ -18,6 +20,7 @@ class App extends PureComponent {
       guesses: []
     }
   }
+
 
 
   render() {
@@ -38,15 +41,15 @@ class App extends PureComponent {
           Hang The Man !
         </button>
 
-        {'abcdefghijklmnopqrstuvwxyz-'.split('').map(this.renderInputButton)}
+        {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(progress, letter))}
       </div>
     )
 
   }
 
-  renderInputButton(letter) {
+  renderInputButton(progress, letter) {
     return(
-    <button onClick={() => console.log(letter)}>
+    <button onClick={() => this.setState({ progress: progress + 1 })}>
     {letter}
     </button>
     )
