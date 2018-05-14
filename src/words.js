@@ -7,7 +7,7 @@ export const randomWord = () => {
   return words[idx]
 }
 
-export const renderWord = (word, guesses) => {
+export const renderWord = (word, guesses, progress) => {
   return word
     .split('')
     .map(letter => guesses.indexOf(letter) > -1 ? letter : '_')
