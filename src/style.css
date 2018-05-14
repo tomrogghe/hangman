@@ -4,18 +4,18 @@
     background-color: burlywood
 }
 
-main {
+:root {
 text-align: center;
-max-width: 800px;
+max-width: 236px;
 margin: 0 auto;
 border: 1px solid #AAA;
 color: #333;
-padding: 20px;
+padding: 50px;
 background-color: #EEE;
 }
 
 .word {
-    font-kerning: 10px;
+font-kerning: 10px;
 font-size: 40px;
 padding: 10px;
 background-color: #DDD;

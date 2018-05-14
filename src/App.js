@@ -53,12 +53,14 @@ class App extends PureComponent {
             <Hangman progress={progress} />
           </div>
           <input id="inputField" type="text" value={renderWord(word, guesses)} />
+          <br /><br />
           {'abcdefghijklmnopqrstuvwxyz-'.split('').map(letter => this.renderInputButton(letter))}
-          <p>{guesses}</p>
-          <p>{word}</p>
-        </div>
+          <br /><br />
+        </div >
       )
     }
+    // <p>{guesses}</p>
+    //<p>{word}</p>
 
     return (
       <div>
